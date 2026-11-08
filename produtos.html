@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos — Horta Grangeiro</title>
     <meta name="description" content="Conheça as hortaliças da Horta Grangeiro: alfaces, couve, rúcula, almeirão, cebolinha, coentro e salsa cultivados em Macedônia, SP.">
+    <meta property="og:title" content="Produtos — Horta Grangeiro">
+    <meta property="og:description" content="Conheça as hortaliças da Horta Grangeiro: alfaces, couve, rúcula, almeirão, cebolinha, coentro e salsa cultivados em Macedônia, SP.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Assets/Imagens/logo.jpg">
+    <meta property="og:locale" content="pt_BR">
     <link rel="icon" type="image/png" href="Assets/Imagens/Favicon/Retangulo.png">
     <link rel="stylesheet" href="Assets/Css/style.css">
     <link rel="stylesheet" href="Assets/Css/tablet.css">
@@ -12,39 +17,40 @@
 </head>
 <body>
 
+    <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo</a>
+
     <header class="cabecalho">
         <a href="index.html" class="cabecalho-logo" aria-label="Horta Grangeiro — Voltar para a página inicial">
             <img src="Assets/Imagens/logo.jpg" alt="Logotipo Horta Grangeiro">
             <span class="cabecalho-nome">Horta Grangeiro</span>
         </a>
 
-        <input type="checkbox" id="menu-aberto" class="menu-controle">
-        <label for="menu-aberto" class="menu-botao" aria-label="Abrir ou fechar menu de navegação">
+        <button type="button" class="menu-botao" aria-label="Abrir ou fechar menu de navegação" aria-expanded="false" aria-controls="navegacao-principal">
             <span></span><span></span><span></span>
-        </label>
+        </button>
 
-        <nav class="navegacao" aria-label="Menu principal da Horta Grangeiro">
+        <nav id="navegacao-principal" class="navegacao" aria-label="Menu principal da Horta Grangeiro">
             <a href="index.html">Início</a>
             <a href="sobre.html">Sobre</a>
-            <a href="produtos.html" class="pagina-atual">Produtos</a>
+            <a href="produtos.html" class="pagina-atual" aria-current="page">Produtos</a>
             <a href="contato.html">Contato</a>
         </nav>
     </header>
 
     <section class="topo-pagina">
         <h1>Nossos Produtos</h1>
-        <p>Hortaliças cultivadas com cuidado, colhidas diariamente e entregues com frescor</p>
+        <p>Colhidas de manhã cedo e entregues no mesmo dia — mais frescas que isso, só no pé</p>
     </section>
 
-    <main class="conteudo">
+    <main class="conteudo" id="conteudo-principal">
 
         <section class="secao" aria-labelledby="catalogo-titulo">
             <header class="catalogo-titulo">
                 <span class="rotulo-secao">Do canteiro para você</span>
-                <h2 id="catalogo-titulo">Portfólio completo</h2>
+                <h2 id="catalogo-titulo">O que cultivamos</h2>
                 <p>
-                    Trabalhamos com 11 variedades de hortaliças frescas.
-                    Cada produto conta com duas fotos, a planta colhida e o canteiro de onde veio.
+                    São 11 variedades de hortaliças que a gente planta, cuida e colhe aqui
+                    na nossa horta em Macedônia.
                 </p>
             </header>
 
@@ -63,7 +69,7 @@
                     </figure>
                     <div class="cartao-descricao">
                         <h3>Alface Americana</h3>
-                        <p>Crocante e refrescante, com folhas compactas e firmes. Excelente em saladas frescas e hambúrgueres artesanais. Sabor levemente amargo e textura inconfundível.</p>
+                        <p>Folhas firmes e crocantes, daquelas que estalam na mordida. Vai bem na salada do dia a dia e é a queridinha dos hambúrgueres.</p>
                     </div>
                 </article>
 
@@ -80,7 +86,7 @@
                     </figure>
                     <div class="cartao-descricao">
                         <h3>Alface Crespa Verde</h3>
-                        <p>Folhas frisadas, macias e levemente brilhantes. Sabor suave e fresco, ideal para saladas, sanduíches e decoração de pratos.</p>
+                        <p>A mais versátil das alfaces. Folhas frisadas, sabor leve e fresco — boa em salada, sanduíche e até pra forrar o prato.</p>
                     </div>
                 </article>
 
@@ -97,7 +103,7 @@
                     </figure>
                     <div class="cartao-descricao">
                         <h3>Alface Manteiga / Lisa</h3>
-                        <p>Textura incrivelmente macia, quase aveludada. Sabor delicado e levemente adocicado, perfeita para wraps e acompanhamentos leves.</p>
+                        <p>Macia de verdade — quase derrete na boca. Sabor delicado e levemente adocicado, perfeita pra quem gosta de uma salada mais suave.</p>
                     </div>
                 </article>
 
@@ -114,7 +120,7 @@
                     </figure>
                     <div class="cartao-descricao">
                         <h3>Alface Bailarina / Mimosa</h3>
-                        <p>Folhas delicadas com bordas recortadas e coloração vibrante. Traz elegância visual e sabor especial a qualquer prato.</p>
+                        <p>Folhas recortadas e bonitas, com um tom que chama atenção no prato. Além de enfeitar, tem um sabor suave que combina com tudo.</p>
                     </div>
                 </article>
 
@@ -131,7 +137,7 @@
                     </figure>
                     <div class="cartao-descricao">
                         <h3>Alface Crespa Roxa</h3>
-                        <p>Coloração roxa intensa e marcante, rica em antocianinas e antioxidantes. Sabor levemente adocicado com visual diferenciado.</p>
+                        <p>Roxinha e vistosa — dá cor ao prato e faz diferença na apresentação. Sabor levemente adocicado e rica em antioxidantes.</p>
                     </div>
                 </article>
 
@@ -148,7 +154,7 @@
                     </figure>
                     <div class="cartao-descricao">
                         <h3>Couve</h3>
-                        <p>Rica em vitaminas K, A e C e minerais. Versátil: ótima refogada com alho, em chips crocantes, smoothies detox ou sucos verdes.</p>
+                        <p>A rainha do suco verde e do refogado com alho. Folhas largas, firmes e cheias de nutriente — daquelas que não podem faltar na feira.</p>
                     </div>
                 </article>
 
@@ -165,7 +171,7 @@
                     </figure>
                     <div class="cartao-descricao">
                         <h3>Rúcula</h3>
-                        <p>Sabor apimentado e aromático que transforma qualquer prato. Essencial em pizzas sofisticadas, massas e saladas gourmet.</p>
+                        <p>Tem aquele ardidinho gostoso que dá vida a qualquer prato. Na pizza, na massa ou na salada — rúcula fresca faz toda a diferença.</p>
                     </div>
                 </article>
 
@@ -182,7 +188,7 @@
                     </figure>
                     <div class="cartao-descricao">
                         <h3>Almeirão</h3>
-                        <p>Sabor amargo característico e muito nutritivo. Excelente refogado com alho e azeite, ou em saladas com molho cítrico que equilibra o amargor.</p>
+                        <p>Pra quem gosta daquele amarguinho que limpa o paladar. Refogado com alho e azeite é clássico, mas também vai bem cru com um fio de limão.</p>
                     </div>
                 </article>
 
@@ -199,7 +205,7 @@
                     </figure>
                     <div class="cartao-descricao">
                         <h3>Cebolinha</h3>
-                        <p>Aroma fresco e sabor suave, indispensável no tempero brasileiro. Combina com arroz, feijão, carnes, ovos, molhos e muito mais.</p>
+                        <p>Tempero que não pode faltar na cozinha brasileira. Fresquinha, picada por cima do feijão, do ovo frito ou da carne — muda o prato inteiro.</p>
                     </div>
                 </article>
 
@@ -216,7 +222,7 @@
                     </figure>
                     <div class="cartao-descricao">
                         <h3>Coentro</h3>
-                        <p>Erva aromática de sabor inconfundível, essencial na culinária nordestina. Indispensável em moquecas, caldos, frutos do mar e carnes.</p>
+                        <p>Cheiro forte e sabor marcante — quem gosta, não vive sem. Vai na moqueca, no caldo, no peixe e em qualquer receita que pede personalidade.</p>
                     </div>
                 </article>
 
@@ -233,16 +239,16 @@
                     </figure>
                     <div class="cartao-descricao">
                         <h3>Salsa</h3>
-                        <p>Versátil e nutritiva, enriquece carnes, molhos, sopas e saladas. Rica em vitaminas A, C e ferro — um clássico indispensável na cozinha.</p>
+                        <p>Parceira de toda receita. Vai no molho, na sopa, na carne e até no suco verde. Versátil, nutritiva e sempre bem-vinda na cozinha.</p>
                     </div>
                 </article>
 
             </div>
 
             <aside class="caixa-interesse">
-                <h3>Interessado em algum produto?</h3>
+                <h3>Quer receber nossas hortaliças?</h3>
                 <p>
-                    Entre em contato para negociar fornecimento regular para sua empresa ou estabelecimento.
+                    Se você tem restaurante, mercado ou outro comércio na região, a gente entrega com regularidade e preço justo.
                 </p>
                 <a href="contato.html" class="botao botao-verde">Solicitar parceria</a>
             </aside>
@@ -254,7 +260,7 @@
     <footer class="rodape">
         <div class="rodape-conteudo">
             <p class="rodape-direitos">
-                &copy; 2026 Horta Grangeiro &mdash; Macedônia, SP &mdash; Todos os direitos reservados
+                &copy; 2026 Horta Grangeiro, Macedônia-SP, Noroeste Paulista &mdash; Todos os direitos reservados
             </p>
             <nav class="rodape-redes" aria-label="Redes sociais da Horta Grangeiro">
                 <a href="https://wa.me/5517997352377" class="link-rede-social" aria-label="WhatsApp da Horta Grangeiro" target="_blank" rel="noopener noreferrer">
@@ -273,5 +279,6 @@
         </div>
     </footer>
 
+    <script src="Assets/javascript/menu.js"></script>
 </body>
 </html>

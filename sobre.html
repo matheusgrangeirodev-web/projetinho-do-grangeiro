@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre — Horta Grangeiro</title>
     <meta name="description" content="Conheça a história da Horta Grangeiro, uma empresa familiar de hortaliças localizada em Macedônia, SP.">
+    <meta property="og:title" content="Sobre — Horta Grangeiro">
+    <meta property="og:description" content="Conheça a história da Horta Grangeiro, uma empresa familiar de hortaliças localizada em Macedônia, SP.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Assets/Imagens/logo.jpg">
+    <meta property="og:locale" content="pt_BR">
     <link rel="icon" type="image/png" href="Assets/Imagens/Favicon/Retangulo.png">
     <link rel="stylesheet" href="Assets/Css/style.css">
     <link rel="stylesheet" href="Assets/Css/tablet.css">
@@ -12,20 +17,21 @@
 </head>
 <body>
 
+    <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo</a>
+
     <header class="cabecalho">
         <a href="index.html" class="cabecalho-logo" aria-label="Horta Grangeiro — Voltar para a página inicial">
             <img src="Assets/Imagens/logo.jpg" alt="Logotipo Horta Grangeiro">
             <span class="cabecalho-nome">Horta Grangeiro</span>
         </a>
 
-        <input type="checkbox" id="menu-aberto" class="menu-controle">
-        <label for="menu-aberto" class="menu-botao" aria-label="Abrir ou fechar menu de navegação">
+        <button type="button" class="menu-botao" aria-label="Abrir ou fechar menu de navegação" aria-expanded="false" aria-controls="navegacao-principal">
             <span></span><span></span><span></span>
-        </label>
+        </button>
 
-        <nav class="navegacao" aria-label="Menu principal da Horta Grangeiro">
+        <nav id="navegacao-principal" class="navegacao" aria-label="Menu principal da Horta Grangeiro">
             <a href="index.html">Início</a>
-            <a href="sobre.html" class="pagina-atual">Sobre</a>
+            <a href="sobre.html" class="pagina-atual" aria-current="page">Sobre</a>
             <a href="produtos.html">Produtos</a>
             <a href="contato.html">Contato</a>
         </nav>
@@ -33,10 +39,10 @@
 
     <section class="topo-pagina">
         <h1>Sobre a Horta Grangeiro</h1>
-        <p>Uma história de família, dedicação e amor pela terra</p>
+        <p>Como a família Grangeiro transformou um pedaço de terra em trabalho, sustento e orgulho</p>
     </section>
 
-    <main class="conteudo">
+    <main class="conteudo" id="conteudo-principal">
 
         <section class="secao" aria-labelledby="historia-titulo">
             <div class="historia-horta">
@@ -44,22 +50,20 @@
                     <span class="rotulo-secao">Nossas raízes</span>
                     <h2 id="historia-titulo">Nossa História</h2>
                     <p>
-                        A Horta Grangeiro é uma empresa familiar gerida por
-                        Matheus Grangeiro, Welberti Grangeiro e Sagib Grangeiro.
-                        Há três anos atua no cultivo especializado de hortaliças,
-                        localizada em Macedônia, SP.
+                        A Horta Grangeiro nasceu do trabalho da família Grangeiro.
+                        Há três anos a gente planta, cuida e colhe hortaliças aqui
+                        em Macedônia, no interior de São Paulo.
                     </p>
                     <p>
-                        Apesar de ser um negócio recente, a empresa construiu sua base
-                        em um princípio claro: <strong>a qualidade do produto é o maior
-                        pilar para conquistar e reter clientes.</strong> Cada hortaliça
-                        que sai daqui passou pelas mãos da nossa família, do plantio
-                        à colheita.
+                        Somos um negócio novo, mas com um princípio que não muda:
+                        <strong>se a verdura não sai boa do canteiro, ela não sai
+                        daqui.</strong> Cada folha que entregamos passou pelas nossas
+                        mãos, do plantio à colheita, sem atalhos.
                     </p>
                     <p>
-                        Nosso maior objetivo é ser um ponto de confiança para os
-                        moradores de Macedônia e região, levando frescor e cuidado
-                        à mesa de cada cliente.
+                        Nosso objetivo é simples: ser a horta de confiança dos moradores
+                        e comerciantes de Macedônia e região. Quem prova uma vez,
+                        percebe a diferença.
                     </p>
                 </div>
                 <figure class="historia-foto">
@@ -85,9 +89,9 @@
                         Nossa Missão
                     </h3>
                     <p>
-                        Cultivar hortaliças de qualidade, frescas e acessíveis,
-                        levando à mesa dos clientes o cuidado e a dedicação
-                        de uma produção familiar.
+                        Levar hortaliças frescas e bem cuidadas à mesa de quem
+                        confia no nosso trabalho, com preço justo e produção
+                        que a gente tem orgulho de mostrar.
                     </p>
                 </article>
 
@@ -97,9 +101,10 @@
                         Nossa Visão
                     </h3>
                     <p>
-                        Ampliar nossa presença em Macedônia e região, sendo reconhecidos
-                        como referência em hortaliças frescas de qualidade, fortalecendo
-                        a confiança da comunidade.
+                        Que quando alguém da região pensar em hortaliça de qualidade,
+                        o primeiro nome que venha à cabeça seja Horta Grangeiro.
+                        Queremos crescer, mas sem perder o jeito de quem conhece
+                        cada cliente pelo nome.
                     </p>
                 </article>
 
@@ -109,8 +114,10 @@
                         Nossos Valores
                     </h3>
                     <p>
-                        Qualidade no cultivo, tradição familiar, compromisso com
-                        o cliente, honestidade e valorização da comunidade local.
+                        Trabalho honesto, produto bem feito e palavra que se cumpre.
+                        A gente valoriza quem compra da gente e quem trabalha com
+                        a gente, porque uma horta familiar se constrói assim,
+                        na confiança.
                     </p>
                 </article>
             </div>
@@ -130,7 +137,7 @@
                     </figure>
                     <h3>Matheus Grangeiro</h3>
                     <span class="membro-cargo">Sócio &amp; Gestão</span>
-                    <p>Responsável pela administração e pelo desenvolvimento da empresa, buscando novas parcerias e o crescimento da Horta Grangeiro.</p>
+                    <p>Cuida da parte administrativa e corre atrás de novas parcerias. É quem bota o plano no papel e faz acontecer.</p>
                 </article>
 
                 <article class="cartao-membro">
@@ -139,7 +146,7 @@
                     </figure>
                     <h3>Welberti Grangeiro</h3>
                     <span class="membro-cargo">Sócio &amp; Produção</span>
-                    <p>Acompanha de perto o cultivo e o manejo das hortaliças, garantindo a qualidade e o frescor de cada produto colhido.</p>
+                    <p>O braço forte da horta. Acompanha o cultivo de perto, do preparo da terra à colheita, se a verdura sai bonita, passou pela mão dele.</p>
                 </article>
 
                 <article class="cartao-membro">
@@ -148,7 +155,7 @@
                     </figure>
                     <h3>Sagib Grangeiro</h3>
                     <span class="membro-cargo">Sócio &amp; Comercial</span>
-                    <p>Cuida do relacionamento com clientes e do atendimento, mantendo a confiança e a proximidade que são marca da família.</p>
+                    <p>Responsável pelo atendimento e pelas entregas. Conhece os clientes pelo nome e garante que cada pedido chegue certinho.</p>
                 </article>
 
             </div>
@@ -159,7 +166,7 @@
     <footer class="rodape">
         <div class="rodape-conteudo">
             <p class="rodape-direitos">
-                &copy; 2026 Horta Grangeiro &mdash; Macedônia, SP &mdash; Todos os direitos reservados
+                &copy; 2026 Horta Grangeiro, Macedônia-SP, Noroeste Paulista &mdash; Todos os direitos reservados
             </p>
             <nav class="rodape-redes" aria-label="Redes sociais da Horta Grangeiro">
                 <a href="https://wa.me/5517997352377" class="link-rede-social" aria-label="WhatsApp da Horta Grangeiro" target="_blank" rel="noopener noreferrer">
@@ -178,5 +185,6 @@
         </div>
     </footer>
 
+    <script src="Assets/javascript/menu.js"></script>
 </body>
 </html>
