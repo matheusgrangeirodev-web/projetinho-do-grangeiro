@@ -10,6 +10,43 @@
         grid-template-columns: 1fr;
     }
 
+    .cartao-fotos {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-produto,
+    .espaco-foto {
+        height: 230px;
+    }
+
+    .foto-produto + .foto-produto,
+    .espaco-foto:nth-child(2) {
+        border-left: none;
+        border-top: 1px solid var(--verde-claro);
+    }
+
+    .cartao-descricao {
+        padding: 1.25rem 1.25rem;
+    }
+
+    .cartao-descricao h3 {
+        font-size: 1.35rem;
+    }
+
+    .historia-foto img {
+        height: 240px;
+    }
+
+    .historia-foto-provisoria img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .grade-equipe .cartao-membro:last-child:nth-child(odd) {
+        grid-column: auto;
+        width: auto;
+    }
+
     .menu-botao {
         display: flex;
     }
