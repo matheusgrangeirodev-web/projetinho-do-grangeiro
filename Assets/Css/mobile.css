@@ -42,9 +42,23 @@
         height: 220px;
     }
 
-    .grade-equipe .cartao-membro:last-child:nth-child(odd) {
-        grid-column: auto;
-        width: auto;
+    .cartao-missao,
+    .cartao-membro {
+        min-height: 0;
+    }
+
+    .menu-alternar {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
     }
 
     .menu-botao {
@@ -66,7 +80,7 @@
         z-index: 190;
     }
 
-    .navegacao-aberta {
+    .menu-alternar:checked ~ .navegacao {
         display: flex;
     }
 

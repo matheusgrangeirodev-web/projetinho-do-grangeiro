@@ -15,6 +15,7 @@
     --cinza-medio: #555555;
     --cinza-claro: #666666;
     --sombra: rgba(47, 93, 58, 0.12);
+    --altura-cartao: 17rem;
 }
 
 body {
@@ -98,6 +99,10 @@ img { display: block; max-width: 100%; }
 .navegacao a.pagina-atual {
     border-bottom-color: var(--verde-claro);
     color: var(--verde-claro);
+}
+
+.menu-alternar {
+    display: none;
 }
 
 .menu-botao {
@@ -341,6 +346,7 @@ img { display: block; max-width: 100%; }
 }
 
 .cartao-missao {
+    min-height: var(--altura-cartao);
     background: #fff;
     border-radius: 12px;
     padding: 1.8rem;
@@ -373,27 +379,23 @@ img { display: block; max-width: 100%; }
 
 .grade-equipe {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.grade-equipe .cartao-membro:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    width: calc(50% - 1rem);
-    justify-self: center;
+    grid-template-columns: repeat(2, calc((100% - 3rem) / 3));
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .cartao-membro {
+    min-height: var(--altura-cartao);
     text-align: center;
     background: #fff;
     border-radius: 12px;
-    padding: 2.5rem 2rem;
+    padding: 1.8rem;
     box-shadow: 0 2px 12px var(--sombra);
 }
 
 .membro-foto {
-    width: 140px;
-    height: 140px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     background: var(--verde-claro);
     display: flex;
@@ -403,14 +405,14 @@ img { display: block; max-width: 100%; }
 }
 
 .membro-foto svg {
-    width: 60px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
     opacity: 0.5;
     fill: var(--verde-escuro);
 }
 
 .cartao-membro h3 {
-    font-size: 1.45rem;
+    font-size: 1.25rem;
     margin-bottom: 0.35rem;
 }
 
@@ -425,7 +427,7 @@ img { display: block; max-width: 100%; }
 }
 
 .cartao-membro p {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     line-height: 1.7;
     color: var(--cinza-claro);
     font-style: italic;
@@ -662,6 +664,12 @@ img { display: block; max-width: 100%; }
     gap: 1rem;
 }
 
+.rodape-creditos {
+    margin-top: 0.4rem;
+    font-size: 0.78rem;
+    color: rgba(246, 241, 228, 0.75);
+}
+
 .rodape-direitos {
     font-size: 0.82rem;
     color: rgba(246, 241, 228, 0.85);
@@ -738,6 +746,7 @@ img { display: block; max-width: 100%; }
 .botao:focus-visible,
 .link-rede-social:focus-visible,
 .cabecalho-logo:focus-visible,
+.menu-alternar:focus-visible + .menu-botao,
 .menu-botao:focus-visible {
     outline: 2px solid var(--verde-claro);
     outline-offset: 2px;
@@ -783,6 +792,7 @@ img { display: block; max-width: 100%; }
 
 .foto-produto {
     width: 100%;
+    min-width: 0;
     height: 240px;
     object-fit: cover;
     display: block;
