@@ -740,14 +740,26 @@ img { display: block; max-width: 100%; }
     height: auto;
 }
 
+/* Indicador de foco: escuro por padrao, porque a maioria dos elementos
+   focaveis fica sobre creme ou branco. O verde-claro so alcanca os 3:1
+   exigidos pelo WCAG 1.4.11 quando o fundo adjacente e o verde-escuro. */
 .navegacao a:focus-visible,
 .botao:focus-visible,
 .link-rede-social:focus-visible,
 .cabecalho-logo:focus-visible,
 .menu-alternar:focus-visible + .menu-botao,
 .menu-botao:focus-visible {
-    outline: 2px solid var(--verde-claro);
+    outline: 2px solid var(--verde-escuro);
     outline-offset: 2px;
+}
+
+/* Nos blocos de fundo escuro e o contorno claro que tem contraste */
+.cabecalho a:focus-visible,
+.cabecalho .menu-botao:focus-visible,
+.menu-alternar:focus-visible + .menu-botao,
+.rodape .link-rede-social:focus-visible,
+.faixa-parceria .botao:focus-visible {
+    outline-color: var(--verde-claro);
 }
 
 .campos-formulario {
