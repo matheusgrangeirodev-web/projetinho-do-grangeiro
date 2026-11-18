@@ -4,16 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var botaoEnviar = formulario.querySelector("button[type='submit']");
     var textoOriginal = botaoEnviar.textContent;
+    var enviando = false;
 
     formulario.addEventListener("submit", function (evento) {
         evento.preventDefault();
+
+        if (enviando) return;
 
         if (!formulario.checkValidity()) {
             formulario.reportValidity();
             return;
         }
 
-        botaoEnviar.disabled = true;
+        enviando = true;
+        botaoEnviar.setAttribute("aria-disabled", "true");
+        formulario.setAttribute("aria-busy", "true");
         botaoEnviar.textContent = "Enviando...";
 
         var dados = new FormData(formulario);
@@ -35,7 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
             mostrarMensagem("Erro de conexão. Verifique sua internet e tente novamente, ou entre em contato pelo WhatsApp.", "erro");
         })
         .finally(function () {
-            botaoEnviar.disabled = false;
+            enviando = false;
+            botaoEnviar.removeAttribute("aria-disabled");
+            formulario.removeAttribute("aria-busy");
             botaoEnviar.textContent = textoOriginal;
         });
     });

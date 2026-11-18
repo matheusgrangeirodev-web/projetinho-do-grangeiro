@@ -3,26 +3,19 @@
     h2 { font-size: 1.55rem; }
     .topo-pagina h1 { font-size: 1.75rem; }
 
-    .grade-destaques,
-    .grade-produtos,
     .grade-missao,
     .grade-equipe {
         grid-template-columns: 1fr;
     }
 
-    .cartao-fotos {
-        grid-template-columns: 1fr;
+    .grade-destaques > .cartao-produto,
+    .grade-produtos > .cartao-produto {
+        flex-basis: 100%;
     }
 
-    .foto-produto,
-    .espaco-foto {
-        height: 230px;
-    }
-
-    .foto-produto + .foto-produto,
-    .espaco-foto:nth-child(2) {
-        border-left: none;
-        border-top: 1px solid var(--verde-claro);
+    .foto-produto {
+        aspect-ratio: 1 / 1;
+        max-height: none;
     }
 
     .cartao-descricao {
@@ -42,9 +35,23 @@
         height: 220px;
     }
 
-    .grade-equipe .cartao-membro:last-child:nth-child(odd) {
-        grid-column: auto;
-        width: auto;
+    .cartao-missao,
+    .cartao-membro {
+        min-height: 0;
+    }
+
+    .menu-alternar {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
     }
 
     .menu-botao {
@@ -66,7 +73,7 @@
         z-index: 190;
     }
 
-    .navegacao-aberta {
+    .menu-alternar:checked ~ .navegacao {
         display: flex;
     }
 
